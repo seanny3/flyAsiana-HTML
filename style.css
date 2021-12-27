@@ -1,0 +1,11 @@
+@import "./css/reset.css";
+@import "./css/header.css";
+
+body {
+  color: #222;
+  font-size: 15px;
+  line-height: normal;
+  font-family: "Noto Sans KR", "AppeGothic", "Malgun Gothic", "맑은 고딕",
+    "돋음", "Dotum", "Apple SD Gothic Neo", Arial, Helvetica, sans-serif;
+  word-break: keep-all;
+}

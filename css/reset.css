@@ -1,0 +1,41 @@
+@charset "UTF-8";
+body,
+header,
+footer,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+form,
+label,
+input,
+textarea,
+button,
+select {
+  color: #222;
+  font-size: 15px;
+  line-height: normal;
+  font-family: "Noto Sans KR", "AppeGothic", "Malgun Gothic", "맑은 고딕",
+    "돋음", "Dotum", "Apple SD Gothic Neo", Arial, Helvetica, sans-serif;
+  word-break: keep-all;
+  margin: 0;
+  padding: 0;
+}
+button {
+  background-color: transparent;
+  border: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+em,
+address {
+  font-style: normal;
+}
