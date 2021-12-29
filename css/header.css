@@ -3,6 +3,23 @@
   width: 1180px;
 }
 
+/* fixed */
+.main__header__wrap {
+  background-color: white;
+  position: sticky;
+  top: 0;
+}
+.fixed__notice__top {
+  background-color: white;
+  position: sticky;
+  top: 120px;
+}
+.fixed__notice__bottom {
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+}
+
 /* header top */
 .main__header__top {
   padding-top: 5px;
@@ -98,7 +115,8 @@
 }
 
 /* fixed toggling notice */
-.fixed__notice {
+/* top */
+.fixed__notice__top {
   font-size: 14px;
   height: 50px;
   background-color: #bdbebf;
@@ -161,4 +179,48 @@
 .fixed__inner__top__slider__btn i:nth-child(5) {
   color: #949494;
   font-size: 25px;
+}
+
+/* bottom */
+.fixed__notice__bottom {
+  font-size: 14px;
+  height: 50px;
+  background-color: #bdbebf;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.fixed__inner__bottom {
+  display: flex;
+  justify-content: space-between;
+  margin: auto 0;
+}
+.fixed__inner__bottom span {
+  margin: auto 0;
+  font-size: 14px;
+}
+.fixed__inner__bottom__left {
+  font-weight: bold;
+}
+.fixed__inner__bottom__left i:nth-child(1) {
+  color: white;
+  font-size: 18px;
+  margin-right: 8px;
+}
+.fixed__inner__bottom__left span:nth-child(3) {
+  margin: 0 3px 0 10px;
+  text-decoration: underline;
+}
+
+.fixed__inner__bottom__right button {
+  float: right;
+  display: table-cell;
+  padding: 2px 11px;
+  border: 1px solid #6d6e71;
+  border-radius: 3px;
+  color: #000;
+  text-align: center;
+  box-sizing: border-box;
+  pointer: cursor;
 }
