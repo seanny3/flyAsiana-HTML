@@ -1,0 +1,99 @@
+.specialArea__slider__wrap {
+  margin-top: 128px;
+  position: relative;
+}
+/* title */
+.specialArea__title {
+  text-align: left;
+  position: relative;
+  width: 1180px;
+  margin: 0 auto 53px;
+  box-sizing: border-box;
+  padding: 0 55px;
+}
+.specialArea__title h2 {
+  font-size: 38px;
+  margin-bottom: 24px;
+}
+.specialArea__title p {
+  font-size: 18px;
+}
+.specialArea__title .moreArea__btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 146px;
+  height: 50px;
+  border: 1px solid #1d1d1d;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.specialArea__title .moreArea__btn span {
+  font-size: 16px;
+  font-weight: bold;
+}
+.specialArea__title .moreArea__btn i {
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+/* slide */
+.specialArea__slider__img__container {
+  position: relative;
+  width: 1560px;
+  height: 390px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.specialArea__slider__img__inner {
+  width: calc((272px + 40px) * 30 - 40px);
+  transform: translate(calc(-312px * 10));
+  overflow: hidden;
+  transition: 300ms;
+}
+.specialArea__slider__img__inner .specialArea__slider__img {
+  float: left;
+  width: 272px;
+  height: 390px;
+  margin-right: 40px;
+}
+.specialArea__slider__img__inner .specialArea__slider__img:last-child {
+  margin-right: 0;
+}
+
+/* slide control */
+.specialArea__slider__img__above {
+  position: relative;
+  width: 1520px;
+  height: 390px;
+  margin: 0 auto;
+}
+.specialArea__slider__control .specialArea__slider__left,
+.specialArea__slider__control .specialArea__slider__right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 2px solid black;
+  border-radius: 50%;
+  background-color: white;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 5;
+  box-shadow: 5px 10px 25px 1px #7b7777;
+  cursor: pointer;
+}
+.specialArea__slider__control .specialArea__slider__left i,
+.specialArea__slider__control .specialArea__slider__right i {
+  color: black;
+  text-align: center;
+  font-size: 25px;
+}
+.specialArea__slider__control .specialArea__slider__left {
+  left: -42px;
+}
+.specialArea__slider__control .specialArea__slider__right {
+  right: -42px;
+}

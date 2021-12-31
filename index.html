@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="icon" type="image/png" href="img/favicon.png" />
-    <script defer src="./main.js"></script>
+
     <script
       src="https://kit.fontawesome.com/2223c0d7cd.js"
       crossorigin="anonymous"
     ></script>
+    <script defer src="./main.js"></script>
     <title>아시아나항공 메인</title>
   </head>
   <body>
@@ -180,11 +181,19 @@
         </li>
       </ul>
       <div class="contents__pay__wrap">
-        <div class="use__mileage">마일리지 사용</div>
+        <div class="use__mileage">
+          <span>마일리지 사용</span>
+          <div class="mileage__slider">
+            <div class="mileage__slider__before">OFF</div>
+          </div>
+        </div>
         <ul class="select__tripTypes">
           <li class="shuttle">왕복</li>
           <li class="oneWay">편도</li>
-          <li class="multi">다구간</li>
+          <li class="multi">
+            <span>다구간</span>
+            <i class="fas fa-chevron-right"></i>
+          </li>
         </ul>
         <div class="favorite__routes"><i class="fas fa-star"></i></div>
         <div class="use__coupon">
@@ -209,7 +218,7 @@
             <input type="text" placeholder="좌석등급" />
           </li>
         </ul>
-        <button class="submit"></button>
+        <button class="submit">조회</button>
       </div>
     </div>
 
@@ -220,70 +229,83 @@
           오늘부터 6개월 내 출발하는 항공편의 최저가와 출발일을 간편하게 조회할
           수 있습니다.
         </p>
-        <button class="moreArea__btn"></button>
+        <button class="moreArea__btn">
+          <span>전체보기</span>
+          <i class="fas fa-plus"></i>
+        </button>
       </div>
-      <ul class="specialArea__slider__img__container">
-        <li class="specialArea__slider__img">
-          <img src="" alt="" />
-          <div class="specialArea__slider__img__info"></div>
-        </li>
-        <li class="specialArea__slider__img">
-          <img src="" alt="" />
-          <div class="specialArea__slider__img__info"></div>
-        </li>
-        <li class="specialArea__slider__img">
-          <img src="" alt="" />
-          <div class="specialArea__slider__img__info"></div>
-        </li>
-        <li class="specialArea__slider__img">
-          <img src="" alt="" />
-          <div class="specialArea__slider__img__info"></div>
-        </li>
-        <li class="specialArea__slider__img">
-          <img src="" alt="" />
-          <div class="specialArea__slider__img__info"></div>
-        </li>
-        <li class="specialArea__slider__img">
-          <img src="" alt="" />
-          <div class="specialArea__slider__img__info"></div>
-        </li>
-        <li class="specialArea__slider__img">
-          <img src="" alt="" />
-          <div class="specialArea__slider__img__info"></div>
-        </li>
-        <li class="specialArea__slider__img">
-          <img src="" alt="" />
-          <div class="specialArea__slider__img__info"></div>
-        </li>
-        <li class="specialArea__slider__img">
-          <img src="" alt="" />
-          <div class="specialArea__slider__img__info"></div>
-        </li>
-        <li class="specialArea__slider__img">
-          <img src="" alt="" />
-          <div class="specialArea__slider__img__info"></div>
-        </li>
-      </ul>
-    </div>
-
-    <div class="events_wrap">
-      <div class="event__info">
-        <h2>이벤트</h2>
-        <p>현재 진행중인 이벤트가 없습니다.</p>
-        <div class="event__btn__wrap">
-          <button class="finished__event__btn"></button>
-          <button class="winner__btn"></button>
+      <div class="specialArea__slider__img__above">
+        <div class="specialArea__slider__control">
+          <div class="specialArea__slider__left">
+            <i class="fas fa-chevron-left"></i>
+          </div>
+          <div class="specialArea__slider__right">
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </div>
+        <div class="specialArea__slider__img__container">
+          <ul class="specialArea__slider__img__inner">
+            <li class="specialArea__slider__img">
+              <img src="./img/slider2/slider_01.jpg" alt="" />
+              <div class="specialArea__slider__img__info"></div>
+            </li>
+            <li class="specialArea__slider__img">
+              <img src="./img/slider2/slider_02.jpg" alt="" />
+              <div class="specialArea__slider__img__info"></div>
+            </li>
+            <li class="specialArea__slider__img">
+              <img src="./img/slider2/slider_03.jpg" alt="" />
+              <div class="specialArea__slider__img__info"></div>
+            </li>
+            <li class="specialArea__slider__img">
+              <img src="./img/slider2/slider_04.jpg" alt="" />
+              <div class="specialArea__slider__img__info"></div>
+            </li>
+            <li class="specialArea__slider__img">
+              <img src="./img/slider2/slider_05.jpg" alt="" />
+              <div class="specialArea__slider__img__info"></div>
+            </li>
+            <li class="specialArea__slider__img">
+              <img src="./img/slider2/slider_06.jpg" alt="" />
+              <div class="specialArea__slider__img__info"></div>
+            </li>
+            <li class="specialArea__slider__img">
+              <img src="./img/slider2/slider_07.jpg" alt="" />
+              <div class="specialArea__slider__img__info"></div>
+            </li>
+            <li class="specialArea__slider__img">
+              <img src="./img/slider2/slider_08.jpg" alt="" />
+              <div class="specialArea__slider__img__info"></div>
+            </li>
+            <li class="specialArea__slider__img">
+              <img src="./img/slider2/slider_09.jpg" alt="" />
+              <div class="specialArea__slider__img__info"></div>
+            </li>
+            <li class="specialArea__slider__img">
+              <img src="./img/slider2/slider_10.jpg" alt="" />
+              <div class="specialArea__slider__img__info"></div>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="event__img">
-        <img src="" alt="" />
+    </div>
+
+    <div class="events__wrap">
+      <div class="event__info">
+        <h2>이벤트</h2>
+        <p>아시아나항공만의 특별한 혜택을 누려보세요.</p>
+        <button class="moreEvent__btn">
+          <span>전체보기</span>
+          <i class="fas fa-plus"></i>
+        </button>
       </div>
     </div>
 
-    <div class="banner__wrap">
-      <div class="banner">
-        <img src="" alt="" />
-      </div>
+    <div
+      class="banner__wrap"
+      style="width: 1280px; height: 180px; margin: 120px auto"
+    >
+      <img src="./img/banner.png" alt="" />
     </div>
 
     <div class="notice__wrap">
@@ -295,51 +317,70 @@
       <article>
         <ul class="notice__content__container">
           <li class="notice__content">
-            <p class="notice__content__title"></p>
-            <p class="notice__content__date"></p>
+            <p class="notice__content__title">
+              국내선 선호/주말 Peak 운임 적용 시간 변경 안내
+            </p>
+            <p class="notice__content__date">2021.12.03</p>
           </li>
           <li class="notice__content">
-            <p class="notice__content__title"></p>
-            <p class="notice__content__date"></p>
+            <p class="notice__content__title">국내선 유류활증료 (2022년 1월)</p>
+            <p class="notice__content__date">2021.12.02</p>
           </li>
           <li class="notice__content">
-            <p class="notice__content__title"></p>
-            <p class="notice__content__date"></p>
+            <p class="notice__content__title">
+              스타얼라이언스 추천율(NPS) 설문조사
+            </p>
+            <p class="notice__content__date">2021.12.01</p>
           </li>
         </ul>
       </article>
     </div>
 
     <div class="service__wrap">
+      <div class="service__banner">
+        <img src="./img/service/service.jpg" alt="" />
+      </div>
       <div class="service__title">
         <h2>제휴 서비스 안내</h2>
         <p>아시아나항공의 다양한 제휴상품 이용하시고 편안한 여행하세요.</p>
       </div>
       <ul class="service__content__container">
         <li class="service__content">
-          <img src="" alt="" />
-          <h4></h4>
-          <p></p>
+          <img src="./img/service/service_01.png" alt="" />
+          <div class="service__content__info">
+            <h4>마일리지 적립</h4>
+            <p>제휴 신용카드 사용하고,<br />마일리지 적립하고!!</p>
+          </div>
         </li>
         <li class="service__content">
-          <img src="" alt="" />
-          <h4></h4>
-          <p></p>
+          <img src="./img/service/service_02.png" alt="" />
+          <div class="service__content__info">
+            <h4>호텔</h4>
+            <p>더 빠르고 스마트한 숙박예약<br />AGODA</p>
+          </div>
         </li>
         <li class="service__content">
-          <img src="" alt="" />
-          <h4></h4>
-          <p></p>
+          <img src="./img/service/service_03.png" alt="" />
+          <div class="service__content__info">
+            <h4>렌터카</h4>
+            <p>전세계 렌터카<br />Rentalcars.com</p>
+          </div>
         </li>
         <li class="service__content">
-          <img src="" alt="" />
-          <h4></h4>
-          <p></p>
+          <img src="./img/service/service_04.png" alt="" />
+          <div class="service__content__info">
+            <h4>여행자 보험</h4>
+            <p>해외여행의 필수품<br />메리츠여행자보험</p>
+          </div>
         </li>
         <li class="service__content">
-          <img src="" alt="" />
-          <h4></h4>
-          <p></p>
+          <img src="./img/service/service_05.png" alt="" />
+          <div class="service__content__info">
+            <h4>투어&액티비티</h4>
+            <p>
+              아시아나항공에서 항공권 예약 시<br />마이리얼트립 최대 10% 할인!
+            </p>
+          </div>
         </li>
       </ul>
     </div>
