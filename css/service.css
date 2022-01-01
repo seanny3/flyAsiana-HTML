@@ -14,8 +14,7 @@
 .service__wrap .service__banner img {
   height: 605px;
   top: 0;
-  filter: blur(2px);
-  opacity: 0.3;
+  opacity: 0.4;
   width: 100%;
   z-index: 0;
 }
@@ -23,7 +22,7 @@
 /* title */
 .service__wrap .service__title {
   width: 1070px;
-  padding: 135px 55px 0;
+  padding: 110px 55px 0;
   margin: 0 auto 70px auto;
 }
 .service__wrap .service__title h2 {
@@ -37,7 +36,6 @@
 /* content */
 .service__content__container {
   width: 1280px;
-  margin-bottom: 50px;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
