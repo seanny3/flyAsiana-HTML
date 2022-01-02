@@ -12,6 +12,9 @@ h6,
 ul,
 ol,
 li,
+dl,
+dt,
+dd,
 form,
 label,
 input,
@@ -33,7 +36,10 @@ button {
   border: none;
 }
 ul,
-ol {
+ol,
+dl,
+dt,
+dd {
   list-style: none;
 }
 em,

@@ -1,0 +1,91 @@
+.footer {
+  background-color: #252523;
+}
+.footer p {
+  color: white;
+}
+
+/* first address */
+.footer .inner address:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .inner address:first-child dl {
+  width: 1180px;
+  height: 97px;
+  margin: 50px 0;
+}
+.footer .inner address:first-child dl dd {
+  display: flex;
+}
+.footer .inner address:first-child dl dd ul:first-child {
+  margin-right: 80px;
+}
+.footer .inner address:first-child dl dt p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.footer .inner address:first-child dl dd p {
+  font-size: 14px;
+  color: #909090;
+  padding-right: 5px;
+  margin-bottom: 3px;
+}
+
+/* second address */
+.footer .inner address:last-child ul {
+  display: flex;
+  flex-direction: column;
+}
+.footer .inner address:last-child ul li {
+  margin-bottom: 3px;
+}
+.footer .inner address:last-child ul li ul {
+  display: flex;
+  flex-direction: row;
+}
+.footer .inner address:last-child ul li ul li {
+  display: flex;
+}
+.footer .inner address:last-child p {
+  font-size: 13px;
+  color: #909090;
+}
+.corp {
+  font-size: 16px;
+  color: white;
+  margin-right: 10px;
+}
+.footer
+  .inner
+  address:last-child
+  ul
+  li
+  ul
+  li:nth-child(n + 2):nth-child(-n + 3)::before {
+  content: "";
+  width: 1px;
+  height: 12px;
+  border-left: 1px solid #acacac;
+  margin: auto 10px;
+}
+
+/* copy rights */
+.copy__rights {
+  margin-top: 5px;
+  display: flex;
+}
+.copy__rights .copy {
+  font-size: 14px;
+  margin-right: 20px;
+}
+.copy__rights .btn__popup {
+  color: #6d6d6d;
+  margin-right: 7px;
+  height: 23px;
+  padding: 0px 11px 0px 7px;
+  font-size: 12px;
+  border: 1px solid #909090;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
