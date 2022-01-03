@@ -89,3 +89,20 @@
   border-radius: 3px;
   box-sizing: border-box;
 }
+
+.footer .inner address:last-child {
+  position: relative;
+  height: 250px;
+}
+/* sponsor */
+.special__logo {
+  position: absolute;
+  bottom: 50px;
+}
+
+/* qrcode */
+.qrcode__container {
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+}
