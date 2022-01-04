@@ -89,3 +89,6 @@ speArea_left.addEventListener('click', () => {
 	}
 	slider_container.style.transform = `translate(calc(-312px*${--speArea_curr_page}))`;
 })
+
+
+// menu drop down

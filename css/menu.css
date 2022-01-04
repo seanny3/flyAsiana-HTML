@@ -1,0 +1,114 @@
+/* reset */
+.menu dl,
+.menu dt,
+.menu dd,
+.menu ul,
+.menu li,
+.menu p {
+  margin: 0;
+  padding: 0;
+}
+
+/* drop down */
+.nav__list__reservation:hover,
+.nav__list__preparation:hover,
+.nav__list__trip:hover,
+.nav__list__club:hover {
+  border-bottom: 5px solid red;
+}
+.nav__list__reservation:hover .reservation__wrap {
+  opacity: 1;
+  max-height: 360px;
+}
+.nav__list__preparation:hover .preparation__wrap {
+  opacity: 1;
+  max-height: 400px;
+}
+.nav__list__trip:hover .trip__wrap {
+  opacity: 1;
+  max-height: 480px;
+}
+.nav__list__club:hover .club__wrap {
+  opacity: 1;
+  max-height: 420px;
+}
+
+.menu__wrap {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  right: 0;
+  background-color: white;
+  width: 100vw;
+  border-top: 1px solid black;
+  padding: 35px;
+  box-sizing: border-box;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: 200ms ease-out;
+}
+.menu {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  width: 1140px;
+  margin: 0 auto;
+}
+.menu > dl {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 400px;
+}
+.menu > dl:before {
+  position: absolute;
+  content: "";
+  border-left: 1px solid #dddddd;
+  height: 100%;
+  width: 1px;
+  margin-left: -25px;
+}
+.menu > dl > dt {
+  margin-bottom: 35px;
+}
+.menu > dl > dt > p {
+  font-size: 16px;
+  font-weight: bold;
+}
+.menu > dl > dd {
+  margin-bottom: 40px;
+}
+.menu > dl > dd > ul {
+  display: flex;
+  flex-direction: column;
+}
+.menu > dl > dd > ul > li {
+  margin-bottom: 9px;
+}
+.menu > dl > dd > ul > li > p {
+  color: #555555;
+  font-size: 13px;
+}
+
+/* reservation */
+
+/* preparation */
+.preparation__wrap {
+}
+
+/* trip */
+.trip__wrap > .trip > dl:last-child > dd > img {
+  background-image: url("./img/menu/magicPass.png");
+  width: 230px;
+}
+
+/* club */
+.club__wrap > .club > dl:last-child:before {
+  display: none;
+}
+.club__wrap > .club > dl:last-child > img {
+  margin-left: 25px;
+  background-image: url("./img/menu/magicPass.png");
+  width: 200px;
+}

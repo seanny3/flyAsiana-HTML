@@ -40,7 +40,7 @@
 /* slide */
 .specialArea__slider__img__container {
   position: relative;
-  width: 1560px;
+  width: 1558px;
   height: 390px;
   margin: 0 auto;
   overflow: hidden;
@@ -81,7 +81,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  z-index: 5;
+  z-index: 1;
   box-shadow: 5px 10px 25px 1px #7b7777;
   cursor: pointer;
 }
