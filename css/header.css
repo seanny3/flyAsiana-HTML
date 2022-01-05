@@ -116,9 +116,7 @@
 .nav__list li {
   padding: 0 20px;
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+
   border-bottom: 5px solid transparent;
   box-sizing: border-box;
 }
@@ -148,6 +146,7 @@
 /* fixed toggling notice */
 /* top */
 .fixed__notice__top {
+  opacity: 0;
   font-size: 14px;
   height: 50px;
   background-color: #bdbebf;

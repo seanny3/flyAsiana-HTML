@@ -11,29 +11,54 @@ function fixed_notice_slider_func() {
 	next_notice.classList.add('auto__slide');
 }
 
-// slider auto
-// const auto_slider = setInterval(auto_slider_func, 4000);
 
+
+
+// slider auto
 function auto_slider_func() {
 	const slider_container = document.querySelector('.slider__img__container');
-	slider_container.style.transform = `translate(calc(-1920px*${++curr_page % 5}))`;
+
 }
 // slider event
-let curr_page = 0;
 const slider_left = document.querySelector('.slider__left');
 const slider_right = document.querySelector('.slider__right');
-
+let curr_page = 1;
 slider_right.addEventListener('click', () => {
 	const slider_container = document.querySelector('.slider__img__container');
-	slider_container.style.transform = `translate(calc(-1920px*${++curr_page % 5}))`;
+	if (curr_page === 6) {
+		slider_container.style.transition = "none";
+		slider_container.style.transform = `translate(calc(-1920px*1))`
+		setTimeout(() => {
+			slider_container.style.transition = "all 1000ms";
+			slider_container.style.transform = `translate(calc(-1920px*2))`;
+		}, 30)
+		curr_page = 0;
+	}
+	slider_container.style.transform = `translate(calc(-1920px*${++curr_page}))`;
+	clicked = true;
 })
 slider_left.addEventListener('click', () => {
 	const slider_container = document.querySelector('.slider__img__container');
 	if (curr_page === 0) {
-		curr_page = 5;
+		slider_container.style.transition = "none";
+		slider_container.style.transform = `translate(calc(-1920px*6))`
+		setTimeout(() => {
+			slider_container.style.transition = "all 1000ms";
+			slider_container.style.transform = `translate(calc(-1920px*5))`;
+		}, 30)
+		curr_page = 6;
 	}
-	slider_container.style.transform = `translate(calc(-1920px*${--curr_page % 5}))`;
+	slider_container.style.transform = `translate(calc(-1920px*${--curr_page}))`;
 })
+
+
+
+
+
+
+
+
+
 
 // contents mileage
 const mileage_btn = document.querySelector('.mileage__slider');
@@ -43,10 +68,15 @@ mileage_btn.addEventListener('click', () => {
 	mileage_btn.classList.toggle('mileage__on');
 })
 
-// special area slide event
-clone_slider_img();
 
-function clone_slider_img() {
+
+
+
+
+// special area slide event
+clone_speArea_slider_img();
+
+function clone_speArea_slider_img() {
 	const li = document.querySelectorAll('.specialArea__slider__img');
 	for (let i = 0; i < li.length; i++) {
 		const clone = li[i].cloneNode(true);
@@ -89,6 +119,3 @@ speArea_left.addEventListener('click', () => {
 	}
 	slider_container.style.transform = `translate(calc(-312px*${--speArea_curr_page}))`;
 })
-
-
-// menu drop down

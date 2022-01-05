@@ -17,18 +17,24 @@
   border-bottom: 5px solid red;
 }
 .nav__list__reservation:hover .reservation__wrap {
+  pointer-events: auto;
+  display: block;
   opacity: 1;
   max-height: 360px;
 }
 .nav__list__preparation:hover .preparation__wrap {
+  pointer-events: auto;
   opacity: 1;
   max-height: 400px;
 }
 .nav__list__trip:hover .trip__wrap {
+  pointer-events: auto;
   opacity: 1;
   max-height: 480px;
 }
 .nav__list__club:hover .club__wrap {
+  pointer-events: auto;
+  display: block;
   opacity: 1;
   max-height: 420px;
 }
@@ -47,6 +53,7 @@
   opacity: 0;
   overflow: hidden;
   transition: 200ms ease-out;
+  pointer-events: none;
 }
 .menu {
   box-sizing: border-box;
@@ -94,8 +101,6 @@
 /* reservation */
 
 /* preparation */
-.preparation__wrap {
-}
 
 /* trip */
 .trip__wrap > .trip > dl:last-child > dd > img {
