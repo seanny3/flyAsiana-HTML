@@ -12,51 +12,76 @@ function fixed_notice_slider_func() {
 }
 
 
+let vw = window.innerWidth >= 1920 ? 1920 : window.innerWidth;
 
-
-// slider auto
-function auto_slider_func() {
-	const slider_container = document.querySelector('.slider__img__container');
-
-}
 // slider event
 const slider_left = document.querySelector('.slider__left');
 const slider_right = document.querySelector('.slider__right');
+const slider_container = document.querySelector('.slider__img__container');
+const slider_info = document.querySelectorAll('.slider__img__info');
 let curr_page = 1;
-slider_right.addEventListener('click', () => {
-	const slider_container = document.querySelector('.slider__img__container');
+
+// slider auto
+const slider_auto = setInterval(next_slide, 4500);
+
+function next_slide() {
+	delay_click_event();
+	slider_info[curr_page].classList.remove('active');
 	if (curr_page === 6) {
-		slider_container.style.transition = "none";
-		slider_container.style.transform = `translate(calc(-1920px*1))`
+		// page '6' : teleport to page '1' 
+		curr_page = 1;
+		slider_container.style.transition = `none`;
+		slider_container.style.transform = `translate(calc(-${vw}px*${curr_page}))`;
 		setTimeout(() => {
-			slider_container.style.transition = "all 1000ms";
-			slider_container.style.transform = `translate(calc(-1920px*2))`;
+			// magic slide page '1' to 2'
+			slider_container.style.transition = `transform 1300ms`;
+			slider_container.style.transform = `translate(calc(-${vw}px*${++curr_page}))`;
+			setTimeout(() => {
+				slider_info[curr_page].classList.add('active');
+			}, 1200)
 		}, 30)
-		curr_page = 0;
+	} else {
+		// next page '1' ~ '6'  /  ['6': clone page '1']
+		slider_container.style.transform = `translate(calc(-${vw}px*${++curr_page}))`;
+		setTimeout(() => {
+			slider_info[curr_page].classList.add('active');
+		}, 1200)
 	}
-	slider_container.style.transform = `translate(calc(-1920px*${++curr_page}))`;
-	clicked = true;
+}
+function delay_click_event() {
+	// 클릭이벤트 딜레이
+	slider_right.style.pointerEvents = "none";
+	slider_left.style.pointerEvents = "none";
+	setTimeout(() => {
+		slider_right.style.pointerEvents = "auto";
+		slider_left.style.pointerEvents = "auto"
+	}, 1400);
+
+}
+slider_right.addEventListener('click', () => {
+	next_slide();
 })
 slider_left.addEventListener('click', () => {
-	const slider_container = document.querySelector('.slider__img__container');
+	delay_click_event();
+	slider_info[curr_page].classList.remove("active");
 	if (curr_page === 0) {
+		curr_page = 5;
 		slider_container.style.transition = "none";
-		slider_container.style.transform = `translate(calc(-1920px*6))`
+		slider_container.style.transform = `translate(calc(-${vw}px*${curr_page}))`
 		setTimeout(() => {
-			slider_container.style.transition = "all 1000ms";
-			slider_container.style.transform = `translate(calc(-1920px*5))`;
+			slider_container.style.transition = "transform 1300ms";
+			slider_container.style.transform = `translate(calc(-${vw}px*${--curr_page}))`;
+			setTimeout(() => {
+				slider_info[curr_page].classList.add('active');
+			}, 1200)
 		}, 30)
-		curr_page = 6;
+	} else {
+		slider_container.style.transform = `translate(calc(-${vw}px*${--curr_page}))`;
+		setTimeout(() => {
+			slider_info[curr_page].classList.add('active');
+		}, 1200)
 	}
-	slider_container.style.transform = `translate(calc(-1920px*${--curr_page}))`;
 })
-
-
-
-
-
-
-
 
 
 
@@ -67,9 +92,6 @@ mileage_btn.addEventListener('click', () => {
 	before.classList.toggle('mileage__on');
 	mileage_btn.classList.toggle('mileage__on');
 })
-
-
-
 
 
 
