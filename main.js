@@ -12,8 +12,6 @@ function fixed_notice_slider_func() {
 }
 
 
-let vw = window.innerWidth >= 1920 ? 1920 : window.innerWidth;
-
 // slider event
 const slider_left = document.querySelector('.slider__left');
 const slider_right = document.querySelector('.slider__right');
@@ -31,18 +29,18 @@ function next_slide() {
 		// page '6' : teleport to page '1' 
 		curr_page = 1;
 		slider_container.style.transition = `none`;
-		slider_container.style.transform = `translate(calc(-${vw}px*${curr_page}))`;
+		slider_container.style.transform = `translate(calc(-1920px*${curr_page}))`;
 		setTimeout(() => {
 			// magic slide page '1' to 2'
 			slider_container.style.transition = `transform 1300ms`;
-			slider_container.style.transform = `translate(calc(-${vw}px*${++curr_page}))`;
+			slider_container.style.transform = `translate(calc(-1920px*${++curr_page}))`;
 			setTimeout(() => {
 				slider_info[curr_page].classList.add('active');
 			}, 1200)
 		}, 30)
 	} else {
 		// next page '1' ~ '6'  /  ['6': clone page '1']
-		slider_container.style.transform = `translate(calc(-${vw}px*${++curr_page}))`;
+		slider_container.style.transform = `translate(calc(-1920px*${++curr_page}))`;
 		setTimeout(() => {
 			slider_info[curr_page].classList.add('active');
 		}, 1200)
@@ -58,6 +56,7 @@ function delay_click_event() {
 	}, 1400);
 
 }
+
 slider_right.addEventListener('click', () => {
 	next_slide();
 })
@@ -67,16 +66,16 @@ slider_left.addEventListener('click', () => {
 	if (curr_page === 0) {
 		curr_page = 5;
 		slider_container.style.transition = "none";
-		slider_container.style.transform = `translate(calc(-${vw}px*${curr_page}))`
+		slider_container.style.transform = `translate(calc(-1920px*${curr_page}))`
 		setTimeout(() => {
 			slider_container.style.transition = "transform 1300ms";
-			slider_container.style.transform = `translate(calc(-${vw}px*${--curr_page}))`;
+			slider_container.style.transform = `translate(calc(-1920px*${--curr_page}))`;
 			setTimeout(() => {
 				slider_info[curr_page].classList.add('active');
 			}, 1200)
 		}, 30)
 	} else {
-		slider_container.style.transform = `translate(calc(-${vw}px*${--curr_page}))`;
+		slider_container.style.transform = `translate(calc(-1920px*${--curr_page}))`;
 		setTimeout(() => {
 			slider_info[curr_page].classList.add('active');
 		}, 1200)
